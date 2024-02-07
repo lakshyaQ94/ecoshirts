@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Ecofriendlytshirts</title>
+</head>
+<body>
+  <img src="./TM.png" width="60px">
+  <h1>Ecotshirts</h1>
+  <center><a href="./index.html">Ecogreen</a></center>
+  <div class="container">
+     <div class="right-box">
+      <div class="main-image-box">
+        <img src="./blackeco.png" id="mainimage" class="mainimage">
+        <h4>Ecounity is one of the t-shirts sold by Ecotshirts for promoting conservation of life below water</h4>
+      </div>
+      <div class="smallimages">
+        <div class="image-box"><img src="./Blue-removebg-preview.png" class="image"></div>
+        <div class="image-box"><img src="./purpleco.png" class="image"></div>
+        <div class="image-box"><img src="./orange-removebg-preview (1).png" class="image"></div>
+      </div>
+         <table cellspacing="0" class="inputs">
+      <tr>
+        <td>Quantity</td>
+        <td align="right"><input type="number" id="first"></td>
+      </tr>
+      <tr>
+        <td>Subotal</td>
+        <td align="right"><input type="number" id="second"></td>
+      </tr>
+      <tr>
+        <td>Delivery Charges 18 Rs</td>
+        <td align="right"><input type="number" id="third"></td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td align="right"><input type="number" id="fourth"></td>
+      </tr>
+     </table>
+     <p>Specifications:</p>
+     <p>These tshirts are made up of Cotton and it is also biodegreadable. These tshirts keeps your body fresh and cool. 
+      It is easy to wash and also durable. It is more cheaper in comparision to non-biodegredable fabric. EcoUuity promotes the word to protecting water from degradation with Ecotourism</p>
+      <div class="details-box">
+      <h5>Rs. 500.00</h5>
+      <button><a href="https://pages.razorpay.com/pl_NQ2R9kiIwBQd0Z/view">Buy Now</a></button>
+     </div>
+  </div>
+  <script>
+    let mainimage = document.getElementById("mainimage");
+    let smallimages = document.getElementsByClassName("image");
+    smallimages[0].onclick = ()=>{
+      mainimage.src = smallimages[0].src;
+    }
+    smallimages[1].onclick = ()=>{
+      mainimage.src = smallimages[1].src;
+    }
+    smallimages[2].onclick = ()=>{
+      mainimage.src = smallimages[2].src;
+    }
+
+    function cart() {
+      var a, b, c, d;
+      a=document.getElementById("first").value;
+      b=a*500;
+      document.getElementById("second").value=b;
+      c=(b*0)/100
+      document.getElementById("third").value=c;
+      d=b+c;
+      document.getElementById("fourth").value=d;
+    }
+    let ans= document.getElementById("first");
+    ans.addEventListener("keyup",cart);
+  </script>
+  </body>
+</html>
+
